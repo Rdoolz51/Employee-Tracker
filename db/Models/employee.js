@@ -1,0 +1,14 @@
+const Model = require('./model');
+
+class Employee extends Model {
+    constructor(first_name, last_name, role_id, manager_id, id = null) {
+        super(id);
+
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.role_id = role_id;
+        this.manager_id = manager_id;
+    }
+}
+
+module.exports = Employee;
