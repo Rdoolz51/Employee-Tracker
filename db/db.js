@@ -26,7 +26,7 @@ const db = {
                      ON e.manager_id=s.id `;
         let [employees] = await connection.query(sql);
         let employeeModels = [];
-        for (let i = 0; i < employees.length; i++) { //first_name, last_name, role_id, manager_id, id = null, manager_first_name = null, manager_last_name = null, role_title = null
+        for (let i = 0; i < employees.length; i++) {
             let employee = new Employee(employees[i].first_name, employees[i].last_name, employees[i].role_id, employees[i].manager_id, employees[i].id, employees[i].manager_first_name, employees[i].manager_last_name, employees[i].title, employees[i].department_name, employees[i].salary);
             employeeModels.push(employee);
         }
