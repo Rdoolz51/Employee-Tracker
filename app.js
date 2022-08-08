@@ -116,6 +116,8 @@ async function nextTask () {
     }
     await nextTask();
 }
+
+//TODO: make sure code works
 async function updateEmployeeRole () {
     const updateRole = [{
         name: 'updatedEmployee',

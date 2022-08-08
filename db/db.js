@@ -12,7 +12,6 @@ const connect = () => mysql.createConnection({
     database: 'employee'
 }).promise();
 
-
 const db = {
     getEmployees: async () => {
         const connection = connect();
